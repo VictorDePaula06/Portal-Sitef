@@ -7,42 +7,42 @@
 body {
   background-color: #0b0f19; /* Deep modern navy/slate */
   color: #f8fafc;
-  /* Aurora / Mesh Gradient to make the glass blur POP */
+  /* Aurora / Mesh Gradient - made LARGER and BRIGHTER */
   background-image: 
-    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.15) 0%, transparent 50%), /* Indigo */
-    radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.15) 0%, transparent 50%), /* Purple */
-    radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.1) 0%, transparent 50%); /* Sky Blue */
+    radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.35) 0%, transparent 60%), /* Indigo */
+    radial-gradient(circle at 85% 20%, rgba(168, 85, 247, 0.35) 0%, transparent 60%), /* Purple */
+    radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.3) 0%, transparent 60%); /* Sky Blue */
   background-attachment: fixed;
   font-family: var(--font-outfit), sans-serif;
   overflow-x: hidden;
 }
 
-/* Custom glass utilities for dynamic usage */
+/* Custom glass utilities for dynamic usage - EXTREME GLASS */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.25); /* Light catching the top edge */
-  border-left: 1px solid rgba(255, 255, 255, 0.15); /* Light catching the left edge */
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1); /* Much milkier */
+  backdrop-filter: blur(40px); /* Heavier blur */
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.4); /* Stronger light catching the top edge */
+  border-left: 1px solid rgba(255, 255, 255, 0.3); /* Stronger light catching the left edge */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 .glass-panel:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-top: 1px solid rgba(255, 255, 255, 0.35);
-  border-left: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.15); /* Brighten on hover */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .glass-card {
-  background: rgba(10, 15, 25, 0.4); /* Darker tinted glass for large containers */
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.05); /* Lighter glass for large containers */
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
 /* Scrollbar styles for a premium feel */
