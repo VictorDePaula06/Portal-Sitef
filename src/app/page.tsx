@@ -190,7 +190,7 @@ export default function Home() {
           </div>
 
           {/* Cards Grid Area */}
-          <div className="p-6 bg-black/20 min-h-[500px]">
+          <div className="p-6 min-h-[500px]">
             {loading ? (
               <div className="flex flex-col items-center justify-center gap-4 py-20">
                 <div className="relative w-12 h-12">
@@ -235,17 +235,17 @@ export default function Home() {
                     </div>
 
                     {/* Card Body (Credentials) */}
-                    <div className="bg-black/40 rounded-xl p-4 space-y-3 border border-white/5 flex-1">
+                    <div className="bg-white/[0.02] rounded-xl p-4 space-y-3 border border-white/5 flex-1 shadow-inner">
                       <div>
                         <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Acesso SiTef</p>
-                        <div className={`inline-flex items-center px-3 py-1.5 rounded-md border text-sm font-mono tracking-wide w-full overflow-hidden text-ellipsis ${store.isActive ? 'bg-slate-800/50 border-slate-700 text-slate-300' : 'bg-white/5 border-white/10 text-white/40'}`}>
+                        <div className={`inline-flex items-center px-3 py-1.5 rounded-md border text-sm font-mono tracking-wide w-full overflow-hidden text-ellipsis ${store.isActive ? 'bg-white/[0.05] border-white/10 text-slate-300' : 'bg-white/5 border-white/10 text-white/40'}`}>
                           {store.account.email}
                         </div>
                       </div>
                       <div>
                         <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Senha Global</p>
                         <div className="text-slate-400 font-mono text-sm tracking-wide flex items-center gap-2">
-                          <span className={`w-1.5 h-1.5 rounded-full ${store.isActive ? 'bg-emerald-500/50' : 'bg-red-500/50'}`}></span>
+                          <span className={`w-1.5 h-1.5 rounded-full ${store.isActive ? 'bg-emerald-500/50' : 'bg-red-500/50 shadow-[0_0_8px_rgba(239,68,68,0.8)]'}`}></span>
                           {store.account.password}
                         </div>
                       </div>
@@ -270,8 +270,8 @@ export default function Home() {
                         disabled={!store.isActive}
                         className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                           store.isActive 
-                            ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700' 
-                            : 'bg-black/20 text-slate-600 border border-transparent cursor-not-allowed'
+                            ? 'glass-panel hover:bg-white/10 text-slate-200' 
+                            : 'bg-white/[0.02] text-slate-600 border border-transparent cursor-not-allowed'
                         }`}
                         title={store.isActive ? "Editar Credenciais" : "Reative para editar"}
                       >
