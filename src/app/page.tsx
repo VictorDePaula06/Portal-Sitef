@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Store as StoreIcon, Search, AlertCircle, Plus, X, Pencil, LogOut, Terminal } from 'lucide-react';
+import { Store as StoreIcon, Search, AlertCircle, Plus, X, Pencil, LogOut, Terminal, ExternalLink } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 
 type Account = {
@@ -148,6 +148,16 @@ export default function Home() {
                 <span className="hidden sm:inline">Novo Cliente</span>
               </div>
             </button>
+
+            <a
+              href="https://oauth.softwareexpress.com.br/auth/realms/sitefexpress/protocol/openid-connect/auth?response_type=code&client_id=weblogin&scope=openid&state=fx8J7dr69lZLGETGbdEM6-BD4Pk95SM2X82NtBtyNLo%3D&redirect_uri=https://sitefexpress.softwareexpress.com.br/sitefweb/login/oauth2/callback/keycloak&nonce=aIhUhVGb6ZxPtyfSqwqRPvQ4Fm1BAc2-aIMcuEnrf9w"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-5 py-3 glass-panel hover:bg-white/10 rounded-xl transition-all text-white/70 hover:text-white"
+            >
+              <ExternalLink className="w-4 h-4" />
+              <span className="hidden lg:inline">Acessar SiTef Oficial</span>
+            </a>
 
             <button
               onClick={() => signOut()}
