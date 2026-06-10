@@ -24,9 +24,10 @@ export async function GET(request: Request) {
           }
         }
       },
-      orderBy: {
-        name: 'asc'
-      }
+      orderBy: [
+        { isActive: 'desc' },
+        { name: 'asc' }
+      ]
     });
 
     return NextResponse.json(stores);
@@ -65,9 +66,21 @@ export async function POST(request: Request) {
 export async function PUT(request: Request) {
   try {
     const data = await request.json();
-    const { id, name, cnpj, password, accountId } = data;
+    const { id, name, cnpj, password, accountId, isActive, toggleActive } = data;
 
-    if (!id || !name || !cnpj || !password || !accountId) {
+    if (!id) {
+      return NextResponse.json({ error: 'ID é obrigatório' }, { status: 400 });
+    }
+
+    if (toggleActive) {
+      const store = await prisma.store.update({
+        where: { id },
+        data: { isActive }
+      });
+      return NextResponse.json({ success: true, store });
+    }
+
+    if (!name || !cnpj || !password || !accountId) {
       return NextResponse.json({ error: 'Faltam dados obrigatórios' }, { status: 400 });
     }
 

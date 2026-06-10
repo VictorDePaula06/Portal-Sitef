@@ -14,6 +14,7 @@ type Store = {
   id: number;
   name: string;
   cnpj: string;
+  isActive: boolean;
   account: Account;
 };
 
@@ -72,6 +73,25 @@ export default function Home() {
       password: store.account.password || ''
     });
     setIsModalOpen(true);
+  };
+
+  const toggleActiveStatus = async (store: Store) => {
+    if (!confirm(`Tem certeza que deseja ${store.isActive ? 'INATIVAR' : 'ATIVAR'} a loja ${store.name}?`)) return;
+    
+    try {
+      const res = await fetch('/api/stores', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id: store.id, toggleActive: true, isActive: !store.isActive })
+      });
+      if (res.ok) {
+        fetchStores(query);
+      } else {
+        alert('Erro ao alterar status da loja.');
+      }
+    } catch (err) {
+      alert('Erro ao processar a requisição.');
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -202,10 +222,17 @@ export default function Home() {
                   </tr>
                 ) : (
                   stores.map((store) => (
-                    <tr key={store.id} className="group hover:bg-white/[0.03] transition-all duration-300">
+                    <tr key={store.id} className={`group transition-all duration-300 ${store.isActive ? 'hover:bg-white/[0.03]' : 'opacity-40 grayscale hover:opacity-100 hover:grayscale-0 bg-black/40'}`}>
                       <td className="px-8 py-6">
-                        <div className="font-medium text-white/90 group-hover:text-cyan-300 transition-colors duration-300">
-                          {store.name}
+                        <div className="flex items-center gap-3">
+                          <div className={`font-medium transition-colors duration-300 ${store.isActive ? 'text-white/90 group-hover:text-cyan-300' : 'text-white/50 line-through decoration-white/20'}`}>
+                            {store.name}
+                          </div>
+                          {!store.isActive && (
+                            <span className="text-[10px] uppercase tracking-widest bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/20">
+                              Inativo
+                            </span>
+                          )}
                         </div>
                       </td>
                       <td className="px-8 py-6">
@@ -214,24 +241,34 @@ export default function Home() {
                         </div>
                       </td>
                       <td className="px-8 py-6">
-                        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-300 font-mono tracking-wide">
+                        <div className={`inline-flex items-center px-4 py-1.5 rounded-full border text-sm font-mono tracking-wide ${store.isActive ? 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300' : 'bg-white/5 border-white/10 text-white/40'}`}>
                           {store.account.email}
                         </div>
                       </td>
                       <td className="px-8 py-6">
                         <div className="text-white/50 font-mono text-sm tracking-wide flex items-center gap-2">
-                          <span className="w-2 h-2 rounded-full bg-purple-500/50"></span>
+                          <span className={`w-2 h-2 rounded-full ${store.isActive ? 'bg-purple-500/50' : 'bg-red-500/50'}`}></span>
                           {store.account.password}
                         </div>
                       </td>
                       <td className="px-8 py-6 text-center">
-                        <button 
-                          onClick={() => openEditModal(store)}
-                          className="p-3 text-white/30 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-xl transition-all duration-300 transform hover:scale-110 active:scale-95"
-                          title="Editar Credenciais"
-                        >
-                          <Pencil className="w-4 h-4" />
-                        </button>
+                        <div className="flex items-center justify-center gap-2">
+                          <button 
+                            onClick={() => toggleActiveStatus(store)}
+                            className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 active:scale-95 ${store.isActive ? 'text-white/30 hover:text-red-400 hover:bg-red-500/10' : 'text-white/30 hover:text-emerald-400 hover:bg-emerald-500/10'}`}
+                            title={store.isActive ? "Inativar Cliente" : "Reativar Cliente"}
+                          >
+                            <X className={`w-4 h-4 ${store.isActive ? '' : 'rotate-45'}`} />
+                          </button>
+                          <button 
+                            onClick={() => openEditModal(store)}
+                            disabled={!store.isActive}
+                            className={`p-2 rounded-lg transition-all duration-300 transform ${store.isActive ? 'text-white/30 hover:text-cyan-400 hover:bg-cyan-500/10 hover:scale-110 active:scale-95' : 'text-white/10 cursor-not-allowed'}`}
+                            title={store.isActive ? "Editar Credenciais" : "Reative para editar"}
+                          >
+                            <Pencil className="w-4 h-4" />
+                          </button>
+                        </div>
                       </td>
                     </tr>
                   ))
