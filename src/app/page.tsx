@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Store as StoreIcon, Search, AlertCircle, Plus, X, Pencil, LogOut } from 'lucide-react';
+import { Store as StoreIcon, Search, AlertCircle, Plus, X, Pencil, LogOut, Terminal } from 'lucide-react';
 import { signOut } from 'next-auth/react';
 
 type Account = {
@@ -77,30 +77,17 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      if (isEditMode) {
-        const res = await fetch('/api/stores', {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-        if (res.ok) {
-          setIsModalOpen(false);
-          fetchStores(query);
-        } else {
-          alert('Erro ao atualizar cliente.');
-        }
+      const method = isEditMode ? 'PUT' : 'POST';
+      const res = await fetch('/api/stores', {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if (res.ok) {
+        setIsModalOpen(false);
+        fetchStores(query);
       } else {
-        const res = await fetch('/api/stores', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-        if (res.ok) {
-          setIsModalOpen(false);
-          fetchStores(query);
-        } else {
-          alert('Erro ao cadastrar cliente.');
-        }
+        alert('Erro ao processar cliente.');
       }
     } catch (err) {
       alert('Erro ao processar a requisição.');
@@ -108,107 +95,140 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200 font-sans p-6">
-      <div className="max-w-6xl mx-auto">
-        <header className="flex flex-col md:flex-row justify-between items-center mb-10 pb-6 border-b border-slate-800">
-          <div className="flex items-center gap-4 mb-4 md:mb-0">
-            <div className="bg-indigo-600 p-3 rounded-xl shadow-lg shadow-indigo-500/20">
-              <StoreIcon className="w-8 h-8 text-white" />
+    <div className="min-h-screen text-slate-200 font-outfit p-4 md:p-8 relative">
+      
+      {/* Decorative Background Glows */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[400px] bg-cyan-500/10 blur-[150px] pointer-events-none rounded-full"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
+        
+        {/* Header Section */}
+        <header className="flex flex-col md:flex-row justify-between items-center mb-10 p-6 glass-card rounded-3xl">
+          <div className="flex items-center gap-5 mb-6 md:mb-0">
+            <div className="relative group cursor-default">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
+              <div className="relative bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-2xl border border-white/20">
+                <Terminal className="w-8 h-8 text-white" />
+              </div>
             </div>
             <div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">Painel SiTef</h1>
-              <p className="text-sm text-slate-400">Buscador de Clientes e Credenciais</p>
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent tracking-tight">
+                Globaltera SiTef
+              </h1>
+              <p className="text-sm font-medium text-cyan-200/60 uppercase tracking-[0.2em] mt-1">
+                Central de Acessos
+              </p>
             </div>
           </div>
           
-          <div className="flex gap-3">
+          <div className="flex gap-4">
             <button
               onClick={openCreateModal}
-              className="flex items-center gap-2 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-all duration-200 shadow-lg shadow-indigo-600/20 active:scale-95"
+              className="group relative overflow-hidden rounded-xl p-[1px] transition-all hover:scale-105 active:scale-95"
             >
-              <Plus className="w-5 h-5" />
-              <span className="hidden sm:inline">Cadastrar Novo Cliente</span>
-              <span className="sm:hidden">Cadastrar</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500"></span>
+              <div className="relative flex items-center gap-2 px-6 py-3 bg-black/40 backdrop-blur-sm rounded-xl text-white font-medium">
+                <Plus className="w-5 h-5 text-cyan-400 group-hover:rotate-90 transition-transform duration-300" />
+                <span className="hidden sm:inline">Novo Cliente</span>
+              </div>
             </button>
+
             <button
               onClick={() => signOut()}
-              className="flex items-center gap-2 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-medium rounded-lg transition-colors border border-slate-700"
+              className="flex items-center gap-2 px-5 py-3 glass-panel hover:bg-white/10 rounded-xl transition-all text-white/70 hover:text-white"
             >
               <LogOut className="w-4 h-4" />
-              Sair
+              <span className="hidden sm:inline">Sair</span>
             </button>
           </div>
         </header>
 
-        <main className="bg-slate-900 border border-slate-800 rounded-2xl shadow-xl overflow-hidden">
-          <div className="p-6 border-b border-slate-800">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-500" />
-              <input 
-                type="text" 
-                placeholder="Buscar por CNPJ ou nome da loja..." 
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-slate-950 border border-slate-800 rounded-xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 text-lg"
-              />
+        {/* Main Content Area */}
+        <main className="glass-card rounded-3xl overflow-hidden flex flex-col">
+          
+          {/* Search Bar */}
+          <div className="p-6 border-b border-white/5 bg-white/[0.02]">
+            <div className="relative group">
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-md opacity-0 group-focus-within:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative flex items-center">
+                <Search className="absolute left-5 w-5 h-5 text-white/40 group-focus-within:text-cyan-400 transition-colors duration-300" />
+                <input 
+                  type="text" 
+                  placeholder="Pesquisar por CNPJ ou nome da loja..." 
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="w-full pl-14 pr-6 py-5 bg-black/40 border border-white/10 rounded-2xl text-white placeholder-white/30 focus:outline-none focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 transition-all duration-300 text-lg font-light backdrop-blur-md"
+                />
+              </div>
             </div>
           </div>
 
-          <div className="overflow-x-auto">
+          {/* Table Area */}
+          <div className="overflow-x-auto min-h-[500px]">
             <table className="w-full text-left border-collapse">
               <thead>
-                <tr className="bg-slate-950/50 text-xs uppercase tracking-wider text-slate-400 border-b border-slate-800">
-                  <th className="px-6 py-4 font-medium">Loja</th>
-                  <th className="px-6 py-4 font-medium">CNPJ</th>
-                  <th className="px-6 py-4 font-medium">Acesso (Login)</th>
-                  <th className="px-6 py-4 font-medium">Senha</th>
-                  <th className="px-6 py-4 font-medium w-16 text-center">Editar</th>
+                <tr className="bg-white/[0.02] text-xs uppercase tracking-widest text-white/50 border-b border-white/5">
+                  <th className="px-8 py-5 font-semibold">Identificação da Loja</th>
+                  <th className="px-8 py-5 font-semibold">CNPJ</th>
+                  <th className="px-8 py-5 font-semibold">Acesso SiTef</th>
+                  <th className="px-8 py-5 font-semibold">Senha Global</th>
+                  <th className="px-8 py-5 font-semibold text-center">Ações</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800">
+              <tbody className="divide-y divide-white/5">
                 {loading ? (
                   <tr>
-                    <td colSpan={5} className="px-6 py-12 text-center text-slate-500">
-                      <div className="flex justify-center items-center gap-3">
-                        <div className="w-5 h-5 rounded-full border-2 border-indigo-500 border-t-transparent animate-spin"></div>
-                        Carregando lojas...
+                    <td colSpan={5} className="px-8 py-20 text-center">
+                      <div className="flex flex-col items-center justify-center gap-4">
+                        <div className="relative w-12 h-12">
+                          <div className="absolute inset-0 rounded-full border-t-2 border-cyan-400 animate-spin"></div>
+                          <div className="absolute inset-2 rounded-full border-b-2 border-purple-500 animate-spin animation-delay-150"></div>
+                        </div>
+                        <p className="text-cyan-400/70 font-medium tracking-widest uppercase text-sm animate-pulse">Sincronizando Banco de Dados...</p>
                       </div>
                     </td>
                   </tr>
                 ) : stores.length === 0 ? (
                   <tr>
-                    <td colSpan={5} className="px-6 py-16 text-center text-slate-500">
-                      <div className="flex flex-col items-center justify-center gap-3">
-                        <AlertCircle className="w-10 h-10 text-slate-600" />
-                        <p className="text-lg">Nenhuma loja encontrada.</p>
-                        <p className="text-sm text-slate-600">Clique em "Cadastrar Novo Cliente" para adicionar.</p>
+                    <td colSpan={5} className="px-8 py-24 text-center">
+                      <div className="flex flex-col items-center justify-center gap-4">
+                        <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-2">
+                          <AlertCircle className="w-8 h-8 text-white/30" />
+                        </div>
+                        <p className="text-xl font-medium text-white/70">Nenhuma loja localizada.</p>
+                        <p className="text-sm text-white/40">Tente buscar por outro termo ou cadastre um novo cliente.</p>
                       </div>
                     </td>
                   </tr>
                 ) : (
                   stores.map((store) => (
-                    <tr key={store.id} className="hover:bg-slate-800/50 transition-colors duration-150 group">
-                      <td className="px-6 py-4">
-                        <div className="font-medium text-slate-200">{store.name}</div>
+                    <tr key={store.id} className="group hover:bg-white/[0.03] transition-all duration-300">
+                      <td className="px-8 py-6">
+                        <div className="font-medium text-white/90 group-hover:text-cyan-300 transition-colors duration-300">
+                          {store.name}
+                        </div>
                       </td>
-                      <td className="px-6 py-4">
-                        <div className="text-slate-400 font-mono text-sm">{store.cnpj}</div>
+                      <td className="px-8 py-6">
+                        <div className="text-white/50 font-mono text-sm tracking-wide bg-black/20 px-3 py-1.5 rounded-lg inline-block border border-white/5">
+                          {store.cnpj}
+                        </div>
                       </td>
-                      <td className="px-6 py-4">
-                        <div className="inline-flex items-center px-3 py-1 rounded-full bg-slate-950 border border-slate-700 text-sm text-indigo-300 font-mono">
+                      <td className="px-8 py-6">
+                        <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-300 font-mono tracking-wide">
                           {store.account.email}
                         </div>
                       </td>
-                      <td className="px-6 py-4">
-                        <div className="text-slate-400 font-mono text-sm">
+                      <td className="px-8 py-6">
+                        <div className="text-white/50 font-mono text-sm tracking-wide flex items-center gap-2">
+                          <span className="w-2 h-2 rounded-full bg-purple-500/50"></span>
                           {store.account.password}
                         </div>
                       </td>
-                      <td className="px-6 py-4 text-center">
+                      <td className="px-8 py-6 text-center">
                         <button 
                           onClick={() => openEditModal(store)}
-                          className="p-2 text-slate-500 hover:text-indigo-400 hover:bg-indigo-500/10 rounded-lg transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100"
-                          title="Editar Cliente e Senha"
+                          className="p-3 text-white/30 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-xl transition-all duration-300 transform hover:scale-110 active:scale-95"
+                          title="Editar Credenciais"
                         >
                           <Pencil className="w-4 h-4" />
                         </button>
@@ -222,56 +242,63 @@ export default function Home() {
         </main>
       </div>
 
+      {/* Glassmorphism Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-          <div className="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-md shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-            <div className="flex justify-between items-center p-6 border-b border-slate-800 bg-slate-950/50">
-              <h2 className="text-xl font-semibold text-slate-200">
-                {isEditMode ? 'Editar Cliente' : 'Cadastrar Novo Cliente'}
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50">
+          <div className="glass-card w-full max-w-md rounded-3xl overflow-hidden animate-in fade-in zoom-in-95 duration-300 relative border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+            
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-cyan-500 to-transparent opacity-50"></div>
+
+            <div className="flex justify-between items-center p-8 border-b border-white/5 bg-white/[0.02]">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
+                {isEditMode ? 'Editar Credenciais' : 'Novo Cliente'}
               </h2>
-              <button onClick={() => setIsModalOpen(false)} className="text-slate-400 hover:text-white transition-colors">
-                <X className="w-6 h-6" />
+              <button onClick={() => setIsModalOpen(false)} className="text-white/40 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full">
+                <X className="w-5 h-5" />
               </button>
             </div>
             
-            <form onSubmit={handleSubmit} className="p-6 space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-slate-400 mb-1">Nome da Loja</label>
-                <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Ex: POSTO LOBINHO" />
+            <form onSubmit={handleSubmit} className="p-8 space-y-6">
+              <div className="space-y-1">
+                <label className="text-xs font-semibold tracking-widest text-white/50 uppercase">Nome da Loja</label>
+                <input required type="text" value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})} className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 focus:outline-none transition-all" placeholder="Ex: POSTO LOBINHO" />
               </div>
               
-              <div>
-                <label className="block text-sm font-medium text-slate-400 mb-1">CNPJ</label>
-                <input required type="text" value={formData.cnpj} onChange={e => setFormData({...formData, cnpj: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Ex: 00.000.000/0001-00" />
+              <div className="space-y-1">
+                <label className="text-xs font-semibold tracking-widest text-white/50 uppercase">CNPJ</label>
+                <input required type="text" value={formData.cnpj} onChange={e => setFormData({...formData, cnpj: e.target.value})} className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white font-mono focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 focus:outline-none transition-all" placeholder="00.000.000/0001-00" />
               </div>
 
-              <div>
-                <label className="block text-sm font-medium text-slate-400 mb-1">E-mail (SiTef)</label>
+              <div className="space-y-1">
+                <label className="text-xs font-semibold tracking-widest text-white/50 uppercase">E-mail (SiTef)</label>
                 <input 
                   required 
                   type="email" 
                   disabled={isEditMode}
                   value={formData.email} 
                   onChange={e => setFormData({...formData, email: e.target.value})} 
-                  className={`w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none ${isEditMode ? 'opacity-50 cursor-not-allowed' : ''}`} 
-                  placeholder="Ex: bruno.lyra@bisw.com.br" 
+                  className={`w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 focus:outline-none transition-all ${isEditMode ? 'opacity-40 cursor-not-allowed' : ''}`} 
+                  placeholder="bruno.lyra@bisw.com.br" 
                 />
               </div>
 
-              <div>
-                <label className="flex justify-between items-end text-sm font-medium text-slate-400 mb-1">
+              <div className="space-y-1">
+                <label className="flex justify-between items-end text-xs font-semibold tracking-widest text-white/50 uppercase">
                   <span>Senha (SiTef)</span>
-                  {isEditMode && <span className="text-[10px] text-amber-500/80">Altera em todos deste e-mail</span>}
+                  {isEditMode && <span className="text-[10px] text-cyan-400 lowercase tracking-normal bg-cyan-500/10 px-2 py-0.5 rounded">Atualiza todos do e-mail</span>}
                 </label>
-                <input required type="text" value={formData.password} onChange={e => setFormData({...formData, password: e.target.value})} className="w-full bg-slate-950 border border-slate-800 rounded-lg px-4 py-2 text-slate-200 focus:ring-2 focus:ring-indigo-500 focus:outline-none" placeholder="Ex: Gt@2026#Tera@" />
+                <input required type="text" value={formData.password} onChange={e => setFormData({...formData, password: e.target.value})} className="w-full bg-black/40 border border-white/10 rounded-xl px-5 py-3.5 text-white font-mono focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50 focus:outline-none transition-all" placeholder="Gt@2026#Tera@" />
               </div>
 
-              <div className="pt-4 flex gap-3">
-                <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-white rounded-lg transition-colors">
+              <div className="pt-6 flex gap-4">
+                <button type="button" onClick={() => setIsModalOpen(false)} className="flex-1 px-4 py-4 glass-panel hover:bg-white/10 text-white font-medium rounded-xl transition-all duration-300">
                   Cancelar
                 </button>
-                <button type="submit" className="flex-1 px-4 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white font-medium rounded-lg transition-colors shadow-lg shadow-indigo-600/20">
-                  {isEditMode ? 'Salvar Alterações' : 'Salvar Cliente'}
+                <button type="submit" className="flex-1 relative group overflow-hidden rounded-xl">
+                  <span className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 transition-transform duration-300 group-hover:scale-105"></span>
+                  <div className="relative flex items-center justify-center px-4 py-4 font-semibold text-white">
+                    {isEditMode ? 'Salvar Edição' : 'Cadastrar Loja'}
+                  </div>
                 </button>
               </div>
             </form>
