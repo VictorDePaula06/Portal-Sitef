@@ -1,0 +1,1463 @@
+[
+  {
+    "id": 1,
+    "email": "sitef2@globaltera.com.br",
+    "password": "Glob@l2026@@",
+    "lastSynced": "2026-06-10T17:37:45.705Z",
+    "createdAt": "2026-06-10T17:23:10.621Z",
+    "updatedAt": "2026-06-10T17:50:06.640Z",
+    "stores": [
+      {
+        "id": 38,
+        "cnpj": "42.247.064/0001-31",
+        "name": "AUTO ABASTECIMENTO LOVE S",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.657Z",
+        "updatedAt": "2026-06-10T17:50:06.657Z"
+      },
+      {
+        "id": 39,
+        "cnpj": "00.712.637/0001-00",
+        "name": "AUTO POSTO DE SERVICOS MA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.666Z",
+        "updatedAt": "2026-06-10T17:50:06.666Z"
+      },
+      {
+        "id": 40,
+        "cnpj": "24.248.848/0001-00",
+        "name": "AUTO POSTO DO TRABALHO SA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.675Z",
+        "updatedAt": "2026-06-10T17:50:06.675Z"
+      },
+      {
+        "id": 41,
+        "cnpj": "03.015.364/0001-33",
+        "name": "AUTO POSTO NOSSA SENHORA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.683Z",
+        "updatedAt": "2026-06-10T17:50:06.683Z"
+      },
+      {
+        "id": 42,
+        "cnpj": "49.175.693/0001-42",
+        "name": "BOA PEDIDA BARRETO LTDA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.691Z",
+        "updatedAt": "2026-06-10T17:50:06.691Z"
+      },
+      {
+        "id": 43,
+        "cnpj": "51.861.168/0001-22",
+        "name": "BOA PEDIDA BRACUI LTDA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.703Z",
+        "updatedAt": "2026-06-10T17:50:06.703Z"
+      },
+      {
+        "id": 44,
+        "cnpj": "50.920.146/0001-23",
+        "name": "BOA PEDIDA ROMA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.715Z",
+        "updatedAt": "2026-06-10T17:50:06.715Z"
+      },
+      {
+        "id": 45,
+        "cnpj": "41.853.461/0001-94",
+        "name": "CONVENIENCIA ANDARAI",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.727Z",
+        "updatedAt": "2026-06-10T17:50:06.727Z"
+      },
+      {
+        "id": 46,
+        "cnpj": "27.227.996/0001-29",
+        "name": "CONVENIENCIA CENTENARIO D",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.743Z",
+        "updatedAt": "2026-06-10T17:50:06.743Z"
+      },
+      {
+        "id": 47,
+        "cnpj": "39.418.787/0001-41",
+        "name": "CONVENIENCIA NORTE SUL",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.750Z",
+        "updatedAt": "2026-06-10T17:50:06.750Z"
+      },
+      {
+        "id": 48,
+        "cnpj": "45.592.713/0001-20",
+        "name": "LOJA DE CONVENIENCIA ESTR",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.760Z",
+        "updatedAt": "2026-06-10T17:50:06.760Z"
+      },
+      {
+        "id": 49,
+        "cnpj": "28.822.216/0001-51",
+        "name": "LOJA DE CONVENIENCIA MARA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.771Z",
+        "updatedAt": "2026-06-10T17:50:06.771Z"
+      },
+      {
+        "id": 50,
+        "cnpj": "38.108.555/0001-24",
+        "name": "LOJA DE CONVENIENCIA REDE",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.779Z",
+        "updatedAt": "2026-06-10T17:50:06.779Z"
+      },
+      {
+        "id": 51,
+        "cnpj": "50.053.290/0001-00",
+        "name": "LOJA TICTAC",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.789Z",
+        "updatedAt": "2026-06-10T17:50:06.789Z"
+      },
+      {
+        "id": 52,
+        "cnpj": "34.035.303/0001-61",
+        "name": "PONEI POSTO DE GASOLINA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.799Z",
+        "updatedAt": "2026-06-10T17:50:06.799Z"
+      },
+      {
+        "id": 53,
+        "cnpj": "37.536.115/0001-05",
+        "name": "POP AUTO POSTO",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.809Z",
+        "updatedAt": "2026-06-10T17:50:06.809Z"
+      },
+      {
+        "id": 54,
+        "cnpj": "12.091.011/0001-03",
+        "name": "POSTO BRAGA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.819Z",
+        "updatedAt": "2026-06-10T17:50:06.819Z"
+      },
+      {
+        "id": 55,
+        "cnpj": "08.585.694/0001-88",
+        "name": "POSTO DE GASOLINA SOL DA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.829Z",
+        "updatedAt": "2026-06-10T17:50:06.829Z"
+      },
+      {
+        "id": 56,
+        "cnpj": "42.202.333/0001-43",
+        "name": "POSTO E GARAGEM DAS NAÇÕE",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.842Z",
+        "updatedAt": "2026-06-10T17:50:06.842Z"
+      },
+      {
+        "id": 57,
+        "cnpj": "32.156.085/0001-98",
+        "name": "POSTO FREEWAY",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.857Z",
+        "updatedAt": "2026-06-10T17:50:06.857Z"
+      },
+      {
+        "id": 58,
+        "cnpj": "31.190.986/0001-33",
+        "name": "POSTO L Z",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.873Z",
+        "updatedAt": "2026-06-10T17:50:06.873Z"
+      },
+      {
+        "id": 59,
+        "cnpj": "29.893.765/0001-60",
+        "name": "POSTO NOCCHI",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.885Z",
+        "updatedAt": "2026-06-10T17:50:06.885Z"
+      },
+      {
+        "id": 60,
+        "cnpj": "00.854.639/0001-34",
+        "name": "POSTO PINHEIRINHO DE RESE",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.898Z",
+        "updatedAt": "2026-06-10T17:50:06.898Z"
+      },
+      {
+        "id": 61,
+        "cnpj": "05.862.352/0001-70",
+        "name": "POSTO PLANETA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.910Z",
+        "updatedAt": "2026-06-10T17:50:06.910Z"
+      },
+      {
+        "id": 62,
+        "cnpj": "29.695.616/0001-06",
+        "name": "POSTO QUISSAMAN LTDA",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.926Z",
+        "updatedAt": "2026-06-10T17:50:06.926Z"
+      },
+      {
+        "id": 63,
+        "cnpj": "30.993.455/0001-16",
+        "name": "POSTO RODOVIA DO ACO",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.939Z",
+        "updatedAt": "2026-06-10T17:50:06.939Z"
+      },
+      {
+        "id": 64,
+        "cnpj": "27.718.287/0001-46",
+        "name": "POSTO TIC TAC DE MACAE",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.955Z",
+        "updatedAt": "2026-06-10T17:50:06.955Z"
+      },
+      {
+        "id": 65,
+        "cnpj": "17.333.912/0001-88",
+        "name": "PROJAC RIO 2016 AUTO POST",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.969Z",
+        "updatedAt": "2026-06-10T17:50:06.969Z"
+      },
+      {
+        "id": 66,
+        "cnpj": "05.026.181/0001-49",
+        "name": "TIC E TAC",
+        "accountId": 1,
+        "createdAt": "2026-06-10T17:50:06.982Z",
+        "updatedAt": "2026-06-10T17:50:06.982Z"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "email": "sitef3@globaltera.com.br",
+    "password": "Gt@2026#Tera@@",
+    "lastSynced": "2026-06-10T17:37:57.005Z",
+    "createdAt": "2026-06-10T17:23:10.638Z",
+    "updatedAt": "2026-06-10T17:51:19.420Z",
+    "stores": [
+      {
+        "id": 67,
+        "cnpj": "31.384.910/0001-49",
+        "name": "ALVORADA RIO",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.430Z",
+        "updatedAt": "2026-06-10T17:51:19.430Z"
+      },
+      {
+        "id": 68,
+        "cnpj": "41.573.562/0001-01",
+        "name": "AUTO POSTO BENFICA LTDA.",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.443Z",
+        "updatedAt": "2026-06-10T17:51:19.443Z"
+      },
+      {
+        "id": 69,
+        "cnpj": "33.256.272/0001-06",
+        "name": "AUTO POSTO DE SERVIÇOS MA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.453Z",
+        "updatedAt": "2026-06-10T17:51:19.453Z"
+      },
+      {
+        "id": 70,
+        "cnpj": "06.954.238/0001-32",
+        "name": "AUTO POSTO KARAPITO DA BE",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.463Z",
+        "updatedAt": "2026-06-10T17:51:19.463Z"
+      },
+      {
+        "id": 71,
+        "cnpj": "54.337.710/0001-30",
+        "name": "AUTO POSTO OURO NEGRO LTD",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.475Z",
+        "updatedAt": "2026-06-10T17:51:19.475Z"
+      },
+      {
+        "id": 72,
+        "cnpj": "42.478.933/0001-39",
+        "name": "AUTO SERVICO MANGUEIRINHA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.484Z",
+        "updatedAt": "2026-06-10T17:51:19.484Z"
+      },
+      {
+        "id": 73,
+        "cnpj": "01.369.210/0001-14",
+        "name": "BARRA 3 POSTO DE GASOLINA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.496Z",
+        "updatedAt": "2026-06-10T17:51:19.496Z"
+      },
+      {
+        "id": 74,
+        "cnpj": "59.298.254/0001-80",
+        "name": "BOA PEDIDA JOFAVE LTDA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.509Z",
+        "updatedAt": "2026-06-10T17:51:19.509Z"
+      },
+      {
+        "id": 75,
+        "cnpj": "57.148.311/0001-10",
+        "name": "BOA PEDIDA RODOVIA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.520Z",
+        "updatedAt": "2026-06-10T17:51:19.520Z"
+      },
+      {
+        "id": 76,
+        "cnpj": "36.097.451/0001-36",
+        "name": "COSTA AZUL CONVENIENCIAS",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.532Z",
+        "updatedAt": "2026-06-10T17:51:19.532Z"
+      },
+      {
+        "id": 77,
+        "cnpj": "17.171.266/0001-08",
+        "name": "GOL OLIMPICO COMBUSTIVEIS",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.541Z",
+        "updatedAt": "2026-06-10T17:51:19.541Z"
+      },
+      {
+        "id": 78,
+        "cnpj": "18.174.780/0001-51",
+        "name": "JP2 COMÉRCIO DE ALIMENTOS",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.552Z",
+        "updatedAt": "2026-06-10T17:51:19.552Z"
+      },
+      {
+        "id": 79,
+        "cnpj": "52.362.421/0001-66",
+        "name": "JP3 LANCHONETE LTDA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.564Z",
+        "updatedAt": "2026-06-10T17:51:19.564Z"
+      },
+      {
+        "id": 80,
+        "cnpj": "38.236.734/0001-47",
+        "name": "LOJA DE CONVENIENCIA RUA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.577Z",
+        "updatedAt": "2026-06-10T17:51:19.577Z"
+      },
+      {
+        "id": 81,
+        "cnpj": "48.724.869/0001-05",
+        "name": "MV CONVENIENCIAS",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.590Z",
+        "updatedAt": "2026-06-10T17:51:19.590Z"
+      },
+      {
+        "id": 82,
+        "cnpj": "31.210.912/0001-11",
+        "name": "OSORIOS CONVENIENCIA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.604Z",
+        "updatedAt": "2026-06-10T17:51:19.604Z"
+      },
+      {
+        "id": 83,
+        "cnpj": "03.664.832/0001-09",
+        "name": "POSTO BICUIBA BRANCA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.616Z",
+        "updatedAt": "2026-06-10T17:51:19.616Z"
+      },
+      {
+        "id": 84,
+        "cnpj": "68.589.340/0001-33",
+        "name": "POSTO BRASIL GRANDE LTDA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.629Z",
+        "updatedAt": "2026-06-10T17:51:19.629Z"
+      },
+      {
+        "id": 85,
+        "cnpj": "36.472.132/0001-63",
+        "name": "POSTO COCK PIT",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.645Z",
+        "updatedAt": "2026-06-10T17:51:19.645Z"
+      },
+      {
+        "id": 86,
+        "cnpj": "08.374.777/0001-28",
+        "name": "POSTO DE GASOLINA RIO LIM",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.667Z",
+        "updatedAt": "2026-06-10T17:51:19.667Z"
+      },
+      {
+        "id": 87,
+        "cnpj": "00.742.248/0001-28",
+        "name": "POSTO KOHARA LTDA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.685Z",
+        "updatedAt": "2026-06-10T17:51:19.685Z"
+      },
+      {
+        "id": 88,
+        "cnpj": "05.982.730/0001-59",
+        "name": "POSTO NOVA PARADA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.697Z",
+        "updatedAt": "2026-06-10T17:51:19.697Z"
+      },
+      {
+        "id": 89,
+        "cnpj": "30.252.464/0001-56",
+        "name": "POSTO PISTÃO",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.708Z",
+        "updatedAt": "2026-06-10T17:51:19.708Z"
+      },
+      {
+        "id": 90,
+        "cnpj": "03.056.695/0001-11",
+        "name": "POSTO PORTAL DO ITANHANGA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.717Z",
+        "updatedAt": "2026-06-10T17:51:19.717Z"
+      },
+      {
+        "id": 91,
+        "cnpj": "33.595.554/0001-38",
+        "name": "POSTO SANTA BARBARA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.726Z",
+        "updatedAt": "2026-06-10T17:51:19.726Z"
+      },
+      {
+        "id": 92,
+        "cnpj": "00.089.378/0001-03",
+        "name": "POSTO SANTA CLARA DE COPA",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.736Z",
+        "updatedAt": "2026-06-10T17:51:19.736Z"
+      },
+      {
+        "id": 93,
+        "cnpj": "33.225.293/0001-64",
+        "name": "POSTO SANTAREM",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.749Z",
+        "updatedAt": "2026-06-10T17:51:19.749Z"
+      },
+      {
+        "id": 94,
+        "cnpj": "03.676.904/0001-20",
+        "name": "POSTO SAO BENTO DE ITAIPU",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.760Z",
+        "updatedAt": "2026-06-10T17:51:19.760Z"
+      },
+      {
+        "id": 95,
+        "cnpj": "33.069.808/0001-84",
+        "name": "POSTO VANIA DE ABASTECIME",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.771Z",
+        "updatedAt": "2026-06-10T17:51:19.771Z"
+      },
+      {
+        "id": 96,
+        "cnpj": "09.219.721/0001-61",
+        "name": "SPETTO CARNES E DELICATES",
+        "accountId": 2,
+        "createdAt": "2026-06-10T17:51:19.787Z",
+        "updatedAt": "2026-06-10T17:51:19.787Z"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "email": "sitef4@globaltera.com.br",
+    "password": "Gt@2026#Tera@@",
+    "lastSynced": "2026-06-10T17:38:05.758Z",
+    "createdAt": "2026-06-10T17:23:10.652Z",
+    "updatedAt": "2026-06-10T17:52:54.036Z",
+    "stores": [
+      {
+        "id": 97,
+        "cnpj": "28.455.080/0001-99",
+        "name": "AUTO POSTO MASP JARDIM LT",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.046Z",
+        "updatedAt": "2026-06-10T17:52:54.046Z"
+      },
+      {
+        "id": 98,
+        "cnpj": "25.201.006/0001-58",
+        "name": "AUTO POSTO TREVO",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.061Z",
+        "updatedAt": "2026-06-10T17:52:54.061Z"
+      },
+      {
+        "id": 99,
+        "cnpj": "03.573.550/0001-98",
+        "name": "AUTO POSTO TREVO DA BARRA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.075Z",
+        "updatedAt": "2026-06-10T17:52:54.075Z"
+      },
+      {
+        "id": 100,
+        "cnpj": "10.216.713/0001-40",
+        "name": "AUTO POSTO TREVO DAS AMER",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.087Z",
+        "updatedAt": "2026-06-10T17:52:54.087Z"
+      },
+      {
+        "id": 101,
+        "cnpj": "08.821.328/0001-80",
+        "name": "AUTO POSTO VIA EXPRESSA D",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.100Z",
+        "updatedAt": "2026-06-10T17:52:54.100Z"
+      },
+      {
+        "id": 102,
+        "cnpj": "30.092.920/0001-48",
+        "name": "CACHAÇO LANCHONETE E REST",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.110Z",
+        "updatedAt": "2026-06-10T17:52:54.110Z"
+      },
+      {
+        "id": 103,
+        "cnpj": "01.487.893/0001-04",
+        "name": "CENTRO AUTOMOTIVO PACO DE",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.122Z",
+        "updatedAt": "2026-06-10T17:52:54.122Z"
+      },
+      {
+        "id": 104,
+        "cnpj": "43.267.824/0001-35",
+        "name": "J R CONVENIENCIAS LTDA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.138Z",
+        "updatedAt": "2026-06-10T17:52:54.138Z"
+      },
+      {
+        "id": 105,
+        "cnpj": "41.383.855/0001-26",
+        "name": "JARDIM UBA CONVENIENCIA L",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.147Z",
+        "updatedAt": "2026-06-10T17:52:54.147Z"
+      },
+      {
+        "id": 106,
+        "cnpj": "41.559.407/0001-30",
+        "name": "JBM METROPOLITAN CONVENIE",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.158Z",
+        "updatedAt": "2026-06-10T17:52:54.158Z"
+      },
+      {
+        "id": 107,
+        "cnpj": "41.705.255/0001-37",
+        "name": "Jbm Lagos Conveniencias L",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.170Z",
+        "updatedAt": "2026-06-10T17:52:54.170Z"
+      },
+      {
+        "id": 108,
+        "cnpj": "28.353.499/0001-30",
+        "name": "LANCHONETE E CONVENIÊNCIA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.181Z",
+        "updatedAt": "2026-06-10T17:52:54.181Z"
+      },
+      {
+        "id": 109,
+        "cnpj": "45.330.627/0001-49",
+        "name": "LOJA DE CONVENIENCIA 1700",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.193Z",
+        "updatedAt": "2026-06-10T17:52:54.193Z"
+      },
+      {
+        "id": 110,
+        "cnpj": "53.520.394/0001-75",
+        "name": "LOJA DE CONVENIENCIA GLOB",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.204Z",
+        "updatedAt": "2026-06-10T17:52:54.204Z"
+      },
+      {
+        "id": 111,
+        "cnpj": "53.519.257/0001-10",
+        "name": "LOJA DE CONVENIENCIA INSU",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.228Z",
+        "updatedAt": "2026-06-10T17:52:54.228Z"
+      },
+      {
+        "id": 112,
+        "cnpj": "18.869.998/0001-20",
+        "name": "LOJA DE CONVENIENCIA SAO",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.240Z",
+        "updatedAt": "2026-06-10T17:52:54.240Z"
+      },
+      {
+        "id": 113,
+        "cnpj": "08.864.565/0001-29",
+        "name": "MATRIX POSTOS DE COMBUSTI",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.250Z",
+        "updatedAt": "2026-06-10T17:52:54.250Z"
+      },
+      {
+        "id": 114,
+        "cnpj": "35.677.390/0001-13",
+        "name": "PENDOTIBA CONVENIENCIAS L",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.260Z",
+        "updatedAt": "2026-06-10T17:52:54.260Z"
+      },
+      {
+        "id": 115,
+        "cnpj": "04.519.713/0002-06",
+        "name": "PERES MULLER LTDA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.268Z",
+        "updatedAt": "2026-06-10T17:52:54.268Z"
+      },
+      {
+        "id": 116,
+        "cnpj": "33.114.208/0001-90",
+        "name": "POSTO DE GASOLINA E LUBRI",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.278Z",
+        "updatedAt": "2026-06-10T17:52:54.278Z"
+      },
+      {
+        "id": 117,
+        "cnpj": "09.646.518/0001-71",
+        "name": "POSTO DE GASOLINA PEQUENA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.290Z",
+        "updatedAt": "2026-06-10T17:52:54.290Z"
+      },
+      {
+        "id": 118,
+        "cnpj": "42.845.035/0001-71",
+        "name": "POSTO DE GASOLINA VIA 22",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.298Z",
+        "updatedAt": "2026-06-10T17:52:54.298Z"
+      },
+      {
+        "id": 119,
+        "cnpj": "33.648.847/0001-36",
+        "name": "POSTO FIRENZE",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.305Z",
+        "updatedAt": "2026-06-10T17:52:54.305Z"
+      },
+      {
+        "id": 120,
+        "cnpj": "42.207.043/0001-92",
+        "name": "POSTO HAWAI LUBRIFICACAO",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.319Z",
+        "updatedAt": "2026-06-10T17:52:54.319Z"
+      },
+      {
+        "id": 121,
+        "cnpj": "00.792.114/0001-11",
+        "name": "POSTO MIRANTE DA TAQUARA",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.328Z",
+        "updatedAt": "2026-06-10T17:52:54.328Z"
+      },
+      {
+        "id": 122,
+        "cnpj": "06.239.660/0001-06",
+        "name": "POSTO VIA EXPRESSA DE BON",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.338Z",
+        "updatedAt": "2026-06-10T17:52:54.338Z"
+      },
+      {
+        "id": 123,
+        "cnpj": "13.352.093/0001-65",
+        "name": "Posto de Combustiveis Ita",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.346Z",
+        "updatedAt": "2026-06-10T17:52:54.346Z"
+      },
+      {
+        "id": 124,
+        "cnpj": "17.990.671/0001-40",
+        "name": "QUARENTA COMERCIO DE CONV",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.355Z",
+        "updatedAt": "2026-06-10T17:52:54.355Z"
+      },
+      {
+        "id": 125,
+        "cnpj": "16.670.719/0001-70",
+        "name": "QUERUBIM DE QUINTINO",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.368Z",
+        "updatedAt": "2026-06-10T17:52:54.368Z"
+      },
+      {
+        "id": 126,
+        "cnpj": "09.013.369/0001-03",
+        "name": "S BORDALLO COMERCIO DE AL",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.379Z",
+        "updatedAt": "2026-06-10T17:52:54.379Z"
+      },
+      {
+        "id": 127,
+        "cnpj": "35.443.390/0001-59",
+        "name": "VIP GAVIAO CONVENIENCIAS",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.397Z",
+        "updatedAt": "2026-06-10T17:52:54.397Z"
+      },
+      {
+        "id": 128,
+        "cnpj": "53.383.783/0001-04",
+        "name": "VIP TIJUCA CONVENIENCIAS",
+        "accountId": 3,
+        "createdAt": "2026-06-10T17:52:54.418Z",
+        "updatedAt": "2026-06-10T17:52:54.418Z"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "email": "sitef5@globaltera.com.br",
+    "password": "Global@@2026@@",
+    "lastSynced": "2026-06-10T17:38:14.714Z",
+    "createdAt": "2026-06-10T17:23:10.663Z",
+    "updatedAt": "2026-06-10T17:54:42.295Z",
+    "stores": [
+      {
+        "id": 129,
+        "cnpj": "59.868.973/0001-90",
+        "name": "AUTO POSTO 3F LTDA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.302Z",
+        "updatedAt": "2026-06-10T17:54:42.302Z"
+      },
+      {
+        "id": 130,
+        "cnpj": "59.137.993/0001-90",
+        "name": "AUTO POSTO DE ABASTECIMEN",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.311Z",
+        "updatedAt": "2026-06-10T17:54:42.311Z"
+      },
+      {
+        "id": 131,
+        "cnpj": "16.458.508/0001-78",
+        "name": "AUTO POSTO SUBIDA DA SERR",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.328Z",
+        "updatedAt": "2026-06-10T17:54:42.328Z"
+      },
+      {
+        "id": 132,
+        "cnpj": "62.019.000/0001-90",
+        "name": "BELO CAPIVARI CONVENIENCI",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.340Z",
+        "updatedAt": "2026-06-10T17:54:42.340Z"
+      },
+      {
+        "id": 133,
+        "cnpj": "64.590.742/0001-05",
+        "name": "BOA PEDIDA SOL MAXI LTDA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.353Z",
+        "updatedAt": "2026-06-10T17:54:42.353Z"
+      },
+      {
+        "id": 134,
+        "cnpj": "64.465.489/0001-50",
+        "name": "BOA PEDIDA VILA NOVA LTDA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.365Z",
+        "updatedAt": "2026-06-10T17:54:42.365Z"
+      },
+      {
+        "id": 135,
+        "cnpj": "65.287.788/0001-04",
+        "name": "BOA PEDIDA VILA SANTA CEC",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.378Z",
+        "updatedAt": "2026-06-10T17:54:42.378Z"
+      },
+      {
+        "id": 136,
+        "cnpj": "49.978.358/0001-82",
+        "name": "CRUZADA DA BARRA PADARIA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.397Z",
+        "updatedAt": "2026-06-10T17:54:42.397Z"
+      },
+      {
+        "id": 137,
+        "cnpj": "62.692.170/0001-31",
+        "name": "FGA SPEED FOODS",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.412Z",
+        "updatedAt": "2026-06-10T17:54:42.412Z"
+      },
+      {
+        "id": 138,
+        "cnpj": "61.915.729/0001-82",
+        "name": "MATRIX CONVENIENCIA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.429Z",
+        "updatedAt": "2026-06-10T17:54:42.429Z"
+      },
+      {
+        "id": 139,
+        "cnpj": "42.105.700/0001-90",
+        "name": "POSTO DE GASOLINA GURUPI",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.442Z",
+        "updatedAt": "2026-06-10T17:54:42.442Z"
+      },
+      {
+        "id": 140,
+        "cnpj": "30.533.905/0001-98",
+        "name": "POSTO DE GASOLINA JOMAR L",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.454Z",
+        "updatedAt": "2026-06-10T17:54:42.454Z"
+      },
+      {
+        "id": 141,
+        "cnpj": "34.130.305/0001-30",
+        "name": "POSTO DGT",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.466Z",
+        "updatedAt": "2026-06-10T17:54:42.466Z"
+      },
+      {
+        "id": 142,
+        "cnpj": "60.579.836/0001-14",
+        "name": "POSTO NOVA CASTELO",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.477Z",
+        "updatedAt": "2026-06-10T17:54:42.477Z"
+      },
+      {
+        "id": 143,
+        "cnpj": "29.243.447/0001-73",
+        "name": "POSTO NOVO ELDORADO",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.487Z",
+        "updatedAt": "2026-06-10T17:54:42.487Z"
+      },
+      {
+        "id": 144,
+        "cnpj": "55.578.930/0001-19",
+        "name": "POSTO REI ETERNO LTDA",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.501Z",
+        "updatedAt": "2026-06-10T17:54:42.501Z"
+      },
+      {
+        "id": 145,
+        "cnpj": "61.138.210/0001-35",
+        "name": "POSTO SAO JOSE IMPERADOR",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.511Z",
+        "updatedAt": "2026-06-10T17:54:42.511Z"
+      },
+      {
+        "id": 146,
+        "cnpj": "06.100.908/0001-53",
+        "name": "POSTO SAO VICENTE",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.521Z",
+        "updatedAt": "2026-06-10T17:54:42.521Z"
+      },
+      {
+        "id": 147,
+        "cnpj": "28.335.731/0001-07",
+        "name": "POSTO TINGAS",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.531Z",
+        "updatedAt": "2026-06-10T17:54:42.531Z"
+      },
+      {
+        "id": 148,
+        "cnpj": "51.022.488/0001-99",
+        "name": "POSTO VIP BARRETO",
+        "accountId": 4,
+        "createdAt": "2026-06-10T17:54:42.543Z",
+        "updatedAt": "2026-06-10T17:54:42.543Z"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "email": "tef@globaltera.com.br",
+    "password": "Gt@2026#Tera@@",
+    "lastSynced": "2026-06-10T17:38:24.649Z",
+    "createdAt": "2026-06-10T17:23:10.681Z",
+    "updatedAt": "2026-06-10T17:56:20.956Z",
+    "stores": [
+      {
+        "id": 149,
+        "cnpj": "60.391.938/0001-01",
+        "name": "BOA PEDIDA TRES POCOS LT",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:20.966Z",
+        "updatedAt": "2026-06-10T17:56:20.966Z"
+      },
+      {
+        "id": 150,
+        "cnpj": "46.053.680/0001-02",
+        "name": "ACHEI LOJA DE CONVENIENCI",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:20.977Z",
+        "updatedAt": "2026-06-10T17:56:20.977Z"
+      },
+      {
+        "id": 151,
+        "cnpj": "19.196.558/0001-12",
+        "name": "ARMAZEM LOPES - CAMPUSCAO",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:20.989Z",
+        "updatedAt": "2026-06-10T17:56:20.989Z"
+      },
+      {
+        "id": 152,
+        "cnpj": "31.230.909/0001-60",
+        "name": "AUTO POSTO ML RECREIO DOS",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.002Z",
+        "updatedAt": "2026-06-10T17:56:21.002Z"
+      },
+      {
+        "id": 153,
+        "cnpj": "35.135.148/0001-18",
+        "name": "BOA PEDIDA ATERRADO LTDA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.010Z",
+        "updatedAt": "2026-06-10T17:56:21.010Z"
+      },
+      {
+        "id": 154,
+        "cnpj": "39.907.111/0001-11",
+        "name": "BOA PEDIDA CONFORTACO LTD",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.019Z",
+        "updatedAt": "2026-06-10T17:56:21.019Z"
+      },
+      {
+        "id": 155,
+        "cnpj": "39.920.692/0001-21",
+        "name": "BOA PEDIDA GUAPURUVU",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.032Z",
+        "updatedAt": "2026-06-10T17:56:21.032Z"
+      },
+      {
+        "id": 156,
+        "cnpj": "43.209.052/0001-85",
+        "name": "BOA PEDIDA GUSTAVO LIRA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.042Z",
+        "updatedAt": "2026-06-10T17:56:21.042Z"
+      },
+      {
+        "id": 157,
+        "cnpj": "40.012.038/0001-07",
+        "name": "BOA PEDIDA JACUECANGA LTD",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.054Z",
+        "updatedAt": "2026-06-10T17:56:21.054Z"
+      },
+      {
+        "id": 158,
+        "cnpj": "42.331.363/0001-50",
+        "name": "DOM PEDRO II",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.068Z",
+        "updatedAt": "2026-06-10T17:56:21.068Z"
+      },
+      {
+        "id": 159,
+        "cnpj": "18.594.610/0001-26",
+        "name": "HELGAS LANCHONETE LTDA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.080Z",
+        "updatedAt": "2026-06-10T17:56:21.080Z"
+      },
+      {
+        "id": 160,
+        "cnpj": "23.691.236/0001-17",
+        "name": "LAGOA SANTA LOJA DE CONVE",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.095Z",
+        "updatedAt": "2026-06-10T17:56:21.095Z"
+      },
+      {
+        "id": 161,
+        "cnpj": "34.366.446/0001-56",
+        "name": "LANCHONETE CONVENIENCIA B",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.106Z",
+        "updatedAt": "2026-06-10T17:56:21.106Z"
+      },
+      {
+        "id": 162,
+        "cnpj": "33.311.650/0001-07",
+        "name": "LOJA DE CONVENIÊNCIA CANÃ",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.119Z",
+        "updatedAt": "2026-06-10T17:56:21.119Z"
+      },
+      {
+        "id": 163,
+        "cnpj": "04.904.416/0001-95",
+        "name": "LOJA PRIMEIRO DO BRASIL",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.130Z",
+        "updatedAt": "2026-06-10T17:56:21.130Z"
+      },
+      {
+        "id": 164,
+        "cnpj": "18.081.708/0001-80",
+        "name": "LOJA TULIPA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.142Z",
+        "updatedAt": "2026-06-10T17:56:21.142Z"
+      },
+      {
+        "id": 165,
+        "cnpj": "11.513.372/0001-38",
+        "name": "POSTO BARRA GAS",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.153Z",
+        "updatedAt": "2026-06-10T17:56:21.153Z"
+      },
+      {
+        "id": 166,
+        "cnpj": "29.456.787/0001-82",
+        "name": "POSTO CARBAT",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.164Z",
+        "updatedAt": "2026-06-10T17:56:21.164Z"
+      },
+      {
+        "id": 167,
+        "cnpj": "01.131.154/0001-85",
+        "name": "POSTO DE ABASTECIMENTO E",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.178Z",
+        "updatedAt": "2026-06-10T17:56:21.178Z"
+      },
+      {
+        "id": 168,
+        "cnpj": "11.398.725/0001-04",
+        "name": "POSTO GALLENA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.192Z",
+        "updatedAt": "2026-06-10T17:56:21.192Z"
+      },
+      {
+        "id": 169,
+        "cnpj": "05.318.745/0001-17",
+        "name": "POSTO IMPERIAL BRACUI LTD",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.207Z",
+        "updatedAt": "2026-06-10T17:56:21.207Z"
+      },
+      {
+        "id": 170,
+        "cnpj": "13.930.408/0001-04",
+        "name": "POSTO JMX",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.221Z",
+        "updatedAt": "2026-06-10T17:56:21.221Z"
+      },
+      {
+        "id": 171,
+        "cnpj": "13.846.056/0001-03",
+        "name": "POSTO MJX",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.233Z",
+        "updatedAt": "2026-06-10T17:56:21.233Z"
+      },
+      {
+        "id": 172,
+        "cnpj": "25.213.515/0001-09",
+        "name": "POSTO ML AYRTON SENNA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.245Z",
+        "updatedAt": "2026-06-10T17:56:21.245Z"
+      },
+      {
+        "id": 173,
+        "cnpj": "29.520.756/0001-43",
+        "name": "POSTO MONALISA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.258Z",
+        "updatedAt": "2026-06-10T17:56:21.258Z"
+      },
+      {
+        "id": 174,
+        "cnpj": "02.623.670/0001-90",
+        "name": "POSTO PENDOTIBA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.271Z",
+        "updatedAt": "2026-06-10T17:56:21.271Z"
+      },
+      {
+        "id": 175,
+        "cnpj": "03.242.460/0001-14",
+        "name": "POSTO PONTA D AGUA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.285Z",
+        "updatedAt": "2026-06-10T17:56:21.285Z"
+      },
+      {
+        "id": 176,
+        "cnpj": "34.484.564/0001-69",
+        "name": "POSTO ROMA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.301Z",
+        "updatedAt": "2026-06-10T17:56:21.301Z"
+      },
+      {
+        "id": 177,
+        "cnpj": "24.314.862/0001-57",
+        "name": "POSTO TRABALHO ITAGUAI",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.319Z",
+        "updatedAt": "2026-06-10T17:56:21.319Z"
+      },
+      {
+        "id": 178,
+        "cnpj": "24.244.784/0001-61",
+        "name": "POSTO TRABALHO SANTA ROSA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.330Z",
+        "updatedAt": "2026-06-10T17:56:21.330Z"
+      },
+      {
+        "id": 179,
+        "cnpj": "45.383.040/0001-06",
+        "name": "POSTO TRES POCOS LTDA",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.341Z",
+        "updatedAt": "2026-06-10T17:56:21.341Z"
+      },
+      {
+        "id": 180,
+        "cnpj": "42.289.165/0001-75",
+        "name": "ROCAL PRODUTOS DE PETROLE",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.353Z",
+        "updatedAt": "2026-06-10T17:56:21.353Z"
+      },
+      {
+        "id": 181,
+        "cnpj": "07.747.478/0001-29",
+        "name": "VIA MARICA POSTO DE GASOL",
+        "accountId": 5,
+        "createdAt": "2026-06-10T17:56:21.364Z",
+        "updatedAt": "2026-06-10T17:56:21.364Z"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "email": "bruno.lyra@bisw.com.br",
+    "password": "Gt@2026#Tera@",
+    "lastSynced": "2026-06-10T17:38:33.501Z",
+    "createdAt": "2026-06-10T17:23:10.695Z",
+    "updatedAt": "2026-06-10T17:40:55.331Z",
+    "stores": [
+      {
+        "id": 8,
+        "cnpj": "37.155.916/0001-20",
+        "name": "AUTO POSTO ACQUAMARINE DE",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.345Z",
+        "updatedAt": "2026-06-10T17:40:55.345Z"
+      },
+      {
+        "id": 9,
+        "cnpj": "25.213.515/0001-09",
+        "name": "AUTO POSTO ML AYRTON SEN",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.359Z",
+        "updatedAt": "2026-06-10T17:40:55.359Z"
+      },
+      {
+        "id": 10,
+        "cnpj": "07.187.583/0001-80",
+        "name": "GALAPAGOS CENTRO AUTOMOTI",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.370Z",
+        "updatedAt": "2026-06-10T17:40:55.370Z"
+      },
+      {
+        "id": 11,
+        "cnpj": "59.939.654/0003-90",
+        "name": "LOBO'S CONVENIENCIA",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.383Z",
+        "updatedAt": "2026-06-10T17:40:55.383Z"
+      },
+      {
+        "id": 12,
+        "cnpj": "08.399.075/0001-07",
+        "name": "LOJA JARDIM OCEANICO",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.397Z",
+        "updatedAt": "2026-06-10T17:40:55.397Z"
+      },
+      {
+        "id": 13,
+        "cnpj": "02.627.760/0002-30",
+        "name": "LOJA ML E JB",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.407Z",
+        "updatedAt": "2026-06-10T17:40:55.407Z"
+      },
+      {
+        "id": 14,
+        "cnpj": "14.151.481/0001-40",
+        "name": "LOJAS BOOM",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.423Z",
+        "updatedAt": "2026-06-10T17:40:55.423Z"
+      },
+      {
+        "id": 15,
+        "cnpj": "59.939.654/0004-70",
+        "name": "POLO CONVENIENCIA 3",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.436Z",
+        "updatedAt": "2026-06-10T17:40:55.436Z"
+      },
+      {
+        "id": 16,
+        "cnpj": "59.939.654/0002-09",
+        "name": "POLO CONVENIENCIA VISTA A",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.452Z",
+        "updatedAt": "2026-06-10T17:40:55.452Z"
+      },
+      {
+        "id": 17,
+        "cnpj": "06.627.035/0001-67",
+        "name": "POSTO AGORA",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.466Z",
+        "updatedAt": "2026-06-10T17:40:55.466Z"
+      },
+      {
+        "id": 18,
+        "cnpj": "28.452.007/0001-83",
+        "name": "POSTO AMEGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.482Z",
+        "updatedAt": "2026-06-10T17:40:55.482Z"
+      },
+      {
+        "id": 19,
+        "cnpj": "05.930.167/0001-75",
+        "name": "POSTO ANGRAGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.494Z",
+        "updatedAt": "2026-06-10T17:40:55.494Z"
+      },
+      {
+        "id": 20,
+        "cnpj": "08.013.549/0001-22",
+        "name": "POSTO BUSSGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.509Z",
+        "updatedAt": "2026-06-10T17:40:55.509Z"
+      },
+      {
+        "id": 21,
+        "cnpj": "34.066.472/0001-69",
+        "name": "POSTO CORDEIRO",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.519Z",
+        "updatedAt": "2026-06-10T17:40:55.519Z"
+      },
+      {
+        "id": 22,
+        "cnpj": "12.450.523/0001-19",
+        "name": "POSTO DE ABASTECIMENTO LI",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.528Z",
+        "updatedAt": "2026-06-10T17:40:55.528Z"
+      },
+      {
+        "id": 23,
+        "cnpj": "28.452.021/0001-67",
+        "name": "POSTO DE COMBUSTIVEIS ALL",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.544Z",
+        "updatedAt": "2026-06-10T17:40:55.544Z"
+      },
+      {
+        "id": 24,
+        "cnpj": "02.812.638/0001-52",
+        "name": "POSTO DE GASOLINA ELTECON",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.553Z",
+        "updatedAt": "2026-06-10T17:40:55.553Z"
+      },
+      {
+        "id": 25,
+        "cnpj": "08.064.380/0001-30",
+        "name": "POSTO DE GASOLINA JB CAXI",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.564Z",
+        "updatedAt": "2026-06-10T17:40:55.564Z"
+      },
+      {
+        "id": 26,
+        "cnpj": "02.779.787/0001-87",
+        "name": "POSTO GALINA",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.573Z",
+        "updatedAt": "2026-06-10T17:40:55.573Z"
+      },
+      {
+        "id": 27,
+        "cnpj": "03.059.943/0001-88",
+        "name": "POSTO GASMETANO",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.584Z",
+        "updatedAt": "2026-06-10T17:40:55.584Z"
+      },
+      {
+        "id": 28,
+        "cnpj": "08.084.070/0001-87",
+        "name": "POSTO GETGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.591Z",
+        "updatedAt": "2026-06-10T17:40:55.591Z"
+      },
+      {
+        "id": 29,
+        "cnpj": "23.480.790/0001-55",
+        "name": "POSTO GRANGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.599Z",
+        "updatedAt": "2026-06-10T17:40:55.599Z"
+      },
+      {
+        "id": 30,
+        "cnpj": "03.590.204/0001-18",
+        "name": "POSTO ITAGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.608Z",
+        "updatedAt": "2026-06-10T17:40:55.608Z"
+      },
+      {
+        "id": 31,
+        "cnpj": "01.351.380/0001-71",
+        "name": "POSTO LOBINHO",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.616Z",
+        "updatedAt": "2026-06-10T17:40:55.616Z"
+      },
+      {
+        "id": 32,
+        "cnpj": "08.251.786/0001-50",
+        "name": "POSTO NITGAS",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.624Z",
+        "updatedAt": "2026-06-10T17:40:55.624Z"
+      },
+      {
+        "id": 33,
+        "cnpj": "03.996.678/0001-64",
+        "name": "POSTO RFD",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.633Z",
+        "updatedAt": "2026-06-10T17:40:55.633Z"
+      },
+      {
+        "id": 34,
+        "cnpj": "05.873.876/0001-03",
+        "name": "POSTO SAO JOSE CHACARAS R",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.641Z",
+        "updatedAt": "2026-06-10T17:40:55.641Z"
+      },
+      {
+        "id": 35,
+        "cnpj": "14.151.420/0001-83",
+        "name": "Posto Guaragas",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.650Z",
+        "updatedAt": "2026-06-10T17:40:55.650Z"
+      },
+      {
+        "id": 36,
+        "cnpj": "59.939.654/0001-28",
+        "name": "REDE CALAIS DISTRIBUICAO",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.659Z",
+        "updatedAt": "2026-06-10T17:40:55.659Z"
+      },
+      {
+        "id": 37,
+        "cnpj": "59.939.654/0005-51",
+        "name": "ROTA CONVENIENCIA",
+        "accountId": 6,
+        "createdAt": "2026-06-10T17:40:55.667Z",
+        "updatedAt": "2026-06-10T17:40:55.667Z"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "email": "financeiro02@castoldi.com.br",
+    "password": "R3dec@st0ld2",
+    "lastSynced": "2026-06-10T17:38:42.253Z",
+    "createdAt": "2026-06-10T17:23:10.713Z",
+    "updatedAt": "2026-06-10T17:38:42.256Z",
+    "stores": []
+  }
+]
