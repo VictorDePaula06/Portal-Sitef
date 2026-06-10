@@ -18,6 +18,7 @@ export async function GET(request: Request) {
       include: {
         account: {
           select: {
+            id: true,
             email: true,
             password: true
           }
