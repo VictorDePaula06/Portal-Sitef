@@ -125,17 +125,11 @@ export default function Home() {
         {/* Header Section */}
         <header className="flex flex-col md:flex-row justify-between items-center mb-10 p-6 glass-card rounded-3xl">
           <div className="flex items-center gap-5 mb-6 md:mb-0">
-            <div className="relative group cursor-default">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 blur-xl opacity-40 group-hover:opacity-70 transition-opacity duration-500"></div>
-              <div className="relative bg-gradient-to-br from-cyan-500 to-purple-600 p-4 rounded-2xl border border-white/20">
-                <Terminal className="w-8 h-8 text-white" />
-              </div>
-            </div>
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-cyan-100 to-purple-200 bg-clip-text text-transparent tracking-tight">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent tracking-tight">
                 Globaltera SiTef
               </h1>
-              <p className="text-sm font-medium text-cyan-200/60 uppercase tracking-[0.2em] mt-1">
+              <p className="text-sm font-medium text-slate-400 uppercase tracking-[0.2em] mt-1">
                 Central de Acessos
               </p>
             </div>
@@ -183,98 +177,100 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Table Area */}
-          <div className="overflow-x-auto min-h-[500px]">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-white/[0.02] text-xs uppercase tracking-widest text-white/50 border-b border-white/5">
-                  <th className="px-8 py-5 font-semibold">Identificação da Loja</th>
-                  <th className="px-8 py-5 font-semibold">CNPJ</th>
-                  <th className="px-8 py-5 font-semibold">Acesso SiTef</th>
-                  <th className="px-8 py-5 font-semibold">Senha Global</th>
-                  <th className="px-8 py-5 font-semibold text-center">Ações</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/5">
-                {loading ? (
-                  <tr>
-                    <td colSpan={5} className="px-8 py-20 text-center">
-                      <div className="flex flex-col items-center justify-center gap-4">
-                        <div className="relative w-12 h-12">
-                          <div className="absolute inset-0 rounded-full border-t-2 border-cyan-400 animate-spin"></div>
-                          <div className="absolute inset-2 rounded-full border-b-2 border-purple-500 animate-spin animation-delay-150"></div>
-                        </div>
-                        <p className="text-cyan-400/70 font-medium tracking-widest uppercase text-sm animate-pulse">Sincronizando Banco de Dados...</p>
+          {/* Cards Grid Area */}
+          <div className="p-6 bg-black/20 min-h-[500px]">
+            {loading ? (
+              <div className="flex flex-col items-center justify-center gap-4 py-20">
+                <div className="relative w-12 h-12">
+                  <div className="absolute inset-0 rounded-full border-t-2 border-slate-400 animate-spin"></div>
+                  <div className="absolute inset-2 rounded-full border-b-2 border-slate-600 animate-spin animation-delay-150"></div>
+                </div>
+                <p className="text-slate-400 font-medium tracking-widest uppercase text-sm animate-pulse">Sincronizando Banco de Dados...</p>
+              </div>
+            ) : stores.length === 0 ? (
+              <div className="flex flex-col items-center justify-center gap-4 py-24">
+                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-2">
+                  <AlertCircle className="w-8 h-8 text-white/30" />
+                </div>
+                <p className="text-xl font-medium text-white/70">Nenhuma loja localizada.</p>
+                <p className="text-sm text-white/40">Tente buscar por outro termo ou cadastre um novo cliente.</p>
+              </div>
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                {stores.map((store) => (
+                  <div 
+                    key={store.id} 
+                    className={`glass-panel rounded-2xl p-6 flex flex-col gap-5 transition-all duration-300 relative group overflow-hidden ${
+                      store.isActive ? 'hover:-translate-y-1 hover:shadow-2xl hover:shadow-white/5' : 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0'
+                    }`}
+                  >
+                    {/* Active/Inactive Indicator Top Border */}
+                    <div className={`absolute top-0 left-0 w-full h-1 ${store.isActive ? 'bg-gradient-to-r from-emerald-500/50 to-emerald-400/20' : 'bg-red-500/50'}`}></div>
+
+                    {/* Card Header */}
+                    <div className="flex justify-between items-start gap-4">
+                      <div>
+                        <h3 className={`font-semibold text-lg leading-tight transition-colors duration-300 ${store.isActive ? 'text-slate-200 group-hover:text-white' : 'text-slate-400 line-through decoration-slate-500/50'}`}>
+                          {store.name}
+                        </h3>
+                        <p className="text-slate-500 font-mono text-sm mt-1">{store.cnpj}</p>
                       </div>
-                    </td>
-                  </tr>
-                ) : stores.length === 0 ? (
-                  <tr>
-                    <td colSpan={5} className="px-8 py-24 text-center">
-                      <div className="flex flex-col items-center justify-center gap-4">
-                        <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-2">
-                          <AlertCircle className="w-8 h-8 text-white/30" />
-                        </div>
-                        <p className="text-xl font-medium text-white/70">Nenhuma loja localizada.</p>
-                        <p className="text-sm text-white/40">Tente buscar por outro termo ou cadastre um novo cliente.</p>
-                      </div>
-                    </td>
-                  </tr>
-                ) : (
-                  stores.map((store) => (
-                    <tr key={store.id} className={`group transition-all duration-300 ${store.isActive ? 'hover:bg-white/[0.03]' : 'opacity-40 grayscale hover:opacity-100 hover:grayscale-0 bg-black/40'}`}>
-                      <td className="px-8 py-6">
-                        <div className="flex items-center gap-3">
-                          <div className={`font-medium transition-colors duration-300 ${store.isActive ? 'text-white/90 group-hover:text-cyan-300' : 'text-white/50 line-through decoration-white/20'}`}>
-                            {store.name}
-                          </div>
-                          {!store.isActive && (
-                            <span className="text-[10px] uppercase tracking-widest bg-red-500/20 text-red-400 px-2 py-0.5 rounded border border-red-500/20">
-                              Inativo
-                            </span>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-8 py-6">
-                        <div className="text-white/50 font-mono text-sm tracking-wide bg-black/20 px-3 py-1.5 rounded-lg inline-block border border-white/5">
-                          {store.cnpj}
-                        </div>
-                      </td>
-                      <td className="px-8 py-6">
-                        <div className={`inline-flex items-center px-4 py-1.5 rounded-full border text-sm font-mono tracking-wide ${store.isActive ? 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300' : 'bg-white/5 border-white/10 text-white/40'}`}>
+                      {!store.isActive && (
+                        <span className="text-[10px] uppercase tracking-widest bg-red-500/10 text-red-400 px-2.5 py-1 rounded-md border border-red-500/20 whitespace-nowrap">
+                          Inativo
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Card Body (Credentials) */}
+                    <div className="bg-black/40 rounded-xl p-4 space-y-3 border border-white/5 flex-1">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Acesso SiTef</p>
+                        <div className={`inline-flex items-center px-3 py-1.5 rounded-md border text-sm font-mono tracking-wide w-full overflow-hidden text-ellipsis ${store.isActive ? 'bg-slate-800/50 border-slate-700 text-slate-300' : 'bg-white/5 border-white/10 text-white/40'}`}>
                           {store.account.email}
                         </div>
-                      </td>
-                      <td className="px-8 py-6">
-                        <div className="text-white/50 font-mono text-sm tracking-wide flex items-center gap-2">
-                          <span className={`w-2 h-2 rounded-full ${store.isActive ? 'bg-purple-500/50' : 'bg-red-500/50'}`}></span>
+                      </div>
+                      <div>
+                        <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-1">Senha Global</p>
+                        <div className="text-slate-400 font-mono text-sm tracking-wide flex items-center gap-2">
+                          <span className={`w-1.5 h-1.5 rounded-full ${store.isActive ? 'bg-emerald-500/50' : 'bg-red-500/50'}`}></span>
                           {store.account.password}
                         </div>
-                      </td>
-                      <td className="px-8 py-6 text-center">
-                        <div className="flex items-center justify-center gap-2">
-                          <button 
-                            onClick={() => toggleActiveStatus(store)}
-                            className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 active:scale-95 ${store.isActive ? 'text-white/30 hover:text-red-400 hover:bg-red-500/10' : 'text-white/30 hover:text-emerald-400 hover:bg-emerald-500/10'}`}
-                            title={store.isActive ? "Inativar Cliente" : "Reativar Cliente"}
-                          >
-                            <X className={`w-4 h-4 ${store.isActive ? '' : 'rotate-45'}`} />
-                          </button>
-                          <button 
-                            onClick={() => openEditModal(store)}
-                            disabled={!store.isActive}
-                            className={`p-2 rounded-lg transition-all duration-300 transform ${store.isActive ? 'text-white/30 hover:text-cyan-400 hover:bg-cyan-500/10 hover:scale-110 active:scale-95' : 'text-white/10 cursor-not-allowed'}`}
-                            title={store.isActive ? "Editar Credenciais" : "Reative para editar"}
-                          >
-                            <Pencil className="w-4 h-4" />
-                          </button>
-                        </div>
-                      </td>
-                    </tr>
-                  ))
-                )}
-              </tbody>
-            </table>
+                      </div>
+                    </div>
+
+                    {/* Card Footer (Actions) */}
+                    <div className="flex items-center justify-end gap-2 pt-2 border-t border-white/5 mt-auto">
+                      <button 
+                        onClick={() => toggleActiveStatus(store)}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                          store.isActive 
+                            ? 'text-slate-400 hover:text-red-400 hover:bg-red-500/10' 
+                            : 'text-slate-400 hover:text-emerald-400 hover:bg-emerald-500/10'
+                        }`}
+                        title={store.isActive ? "Inativar Cliente" : "Reativar Cliente"}
+                      >
+                        <X className={`w-4 h-4 ${store.isActive ? '' : 'rotate-45'}`} />
+                        {store.isActive ? 'Inativar' : 'Reativar'}
+                      </button>
+                      <button 
+                        onClick={() => openEditModal(store)}
+                        disabled={!store.isActive}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
+                          store.isActive 
+                            ? 'bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700' 
+                            : 'bg-black/20 text-slate-600 border border-transparent cursor-not-allowed'
+                        }`}
+                        title={store.isActive ? "Editar Credenciais" : "Reative para editar"}
+                      >
+                        <Pencil className="w-4 h-4" />
+                        Editar
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </main>
       </div>
