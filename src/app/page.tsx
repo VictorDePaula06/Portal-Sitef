@@ -25,6 +25,7 @@ export default function Home() {
   
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
+  const [storeToToggle, setStoreToToggle] = useState<Store | null>(null);
   
   const [formData, setFormData] = useState({
     id: 0,
@@ -75,17 +76,18 @@ export default function Home() {
     setIsModalOpen(true);
   };
 
-  const toggleActiveStatus = async (store: Store) => {
-    if (!confirm(`Tem certeza que deseja ${store.isActive ? 'INATIVAR' : 'ATIVAR'} a loja ${store.name}?`)) return;
+  const confirmToggleActiveStatus = async () => {
+    if (!storeToToggle) return;
     
     try {
       const res = await fetch('/api/stores', {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: store.id, toggleActive: true, isActive: !store.isActive })
+        body: JSON.stringify({ id: storeToToggle.id, toggleActive: true, isActive: !storeToToggle.isActive })
       });
       if (res.ok) {
         fetchStores(query);
+        setStoreToToggle(null);
       } else {
         alert('Erro ao alterar status da loja.');
       }
@@ -242,7 +244,7 @@ export default function Home() {
                     {/* Card Footer (Actions) */}
                     <div className="flex items-center justify-end gap-2 pt-2 border-t border-white/5 mt-auto">
                       <button 
-                        onClick={() => toggleActiveStatus(store)}
+                        onClick={() => setStoreToToggle(store)}
                         className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
                           store.isActive 
                             ? 'text-slate-400 hover:text-red-400 hover:bg-red-500/10' 
@@ -335,6 +337,32 @@ export default function Home() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Confirmation Modal */}
+      {storeToToggle && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 z-50">
+          <div className="bg-[#0a0a0a] border border-white/10 w-full max-w-sm rounded-3xl p-8 shadow-2xl animate-in fade-in zoom-in-95 duration-200">
+            <h3 className="text-xl font-bold text-white mb-3">Confirmar Ação</h3>
+            <p className="text-white/60 text-sm mb-8 leading-relaxed">
+              Tem certeza que deseja <strong className={storeToToggle.isActive ? "text-red-400" : "text-emerald-400"}>{storeToToggle.isActive ? 'INATIVAR' : 'REATIVAR'}</strong> o acesso da loja <span className="text-white font-medium">{storeToToggle.name}</span>?
+            </p>
+            <div className="flex gap-4">
+              <button 
+                onClick={() => setStoreToToggle(null)}
+                className="flex-1 px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-medium transition-colors duration-300"
+              >
+                Cancelar
+              </button>
+              <button 
+                onClick={confirmToggleActiveStatus}
+                className={`flex-1 px-4 py-3 rounded-xl text-white font-semibold transition-colors duration-300 shadow-lg ${storeToToggle.isActive ? 'bg-red-500 hover:bg-red-600 shadow-red-500/20' : 'bg-emerald-500 hover:bg-emerald-600 shadow-emerald-500/20'}`}
+              >
+                Confirmar
+              </button>
+            </div>
           </div>
         </div>
       )}
